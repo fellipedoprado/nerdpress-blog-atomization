@@ -1,0 +1,10 @@
+.container__article-info > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.container__article-info > ul > li {
+  margin-right: 5px;
+  list-style: none;
+  color: gray;
+}

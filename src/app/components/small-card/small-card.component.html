@@ -1,0 +1,37 @@
+<div class="container__small-card">
+  <div class="container__small-card-content">
+    <div class="small-card__photo">
+      <img
+        src="assets/images/placeholder.png"
+        alt="{{ article.title }}"
+        srcset=""
+      />
+    </div>
+
+    <div class="small-card__content">
+      <app-article-info-list
+        [category]="article.category"
+        [publishedAt]="article.publishedAt | date : 'dd/MM/yyyy'"
+        [author]="article.author"
+      >
+      </app-article-info-list>
+
+      <div class="small-card__title">
+        <h2>
+          <a [routerLink]="['content', article.id]">{{ article.title }}</a>
+        </h2>
+      </div>
+
+      <div class="small-card__description">
+        <p>
+          {{ article.description }}
+          <app-read-more [id]="article.id"></app-read-more>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container__small-card__separator">
+    <hr />
+  </div>
+</div>

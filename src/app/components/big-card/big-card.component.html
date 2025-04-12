@@ -1,0 +1,26 @@
+<div class="container__big-card">
+  <div class="big-card__photo">
+    <img src="assets/images/placeholder.png" height="300px" alt="{{ article.title }}" />
+  </div>
+
+  <div>
+    <app-article-info-list
+      [category]="article.category"
+      [publishedAt]="article.publishedAt | date: 'dd/MM/yyyy'"
+      [author]="article.author">
+    </app-article-info-list>
+  </div>
+
+  <div class="big-card__title">
+    <h2>
+      <a [routerLink]="['content', article.id]">{{ article.title }}</a>
+    </h2>
+  </div>
+
+  <div class="big-card__description">
+    <p>
+      {{ article.description }}
+      <app-read-more [id]="article.id"></app-read-more>
+    </p>
+  </div>
+</div>
