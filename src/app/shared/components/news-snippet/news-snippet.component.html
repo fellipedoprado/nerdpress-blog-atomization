@@ -1,0 +1,14 @@
+<div class="news-snippet__container">
+  <div class="news-snippet__title">
+    <h2>
+      <a [routerLink]="['content', id]">{{ title }}</a>
+    </h2>
+  </div>
+
+  <div class="news-snippet__description">
+    <p>
+      {{ description }}
+      <app-read-more [id]="id"></app-read-more>
+    </p>
+  </div>
+</div>

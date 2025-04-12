@@ -1,0 +1,9 @@
+.news-snippet__description > p {
+  color: grey;
+}
+
+.news-snippet__container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}

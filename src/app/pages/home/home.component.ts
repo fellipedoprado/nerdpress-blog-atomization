@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    this.article_main_index = this.getRandomIndexes(1, this.articles.length);
     this.articles_other_index = this.getRandomIndexes(2, this.articles.length);
   }
 

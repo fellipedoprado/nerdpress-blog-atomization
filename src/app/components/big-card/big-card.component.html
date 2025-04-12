@@ -3,7 +3,7 @@
     <img src="assets/images/placeholder.png" height="300px" alt="{{ article.title }}" />
   </div>
 
-  <div>
+  <div class="big-card__info">
     <app-article-info-list
       [category]="article.category"
       [publishedAt]="article.publishedAt | date: 'dd/MM/yyyy'"
@@ -11,16 +11,9 @@
     </app-article-info-list>
   </div>
 
-  <div class="big-card__title">
-    <h2>
-      <a [routerLink]="['content', article.id]">{{ article.title }}</a>
-    </h2>
-  </div>
-
-  <div class="big-card__description">
-    <p>
-      {{ article.description }}
-      <app-read-more [id]="article.id"></app-read-more>
-    </p>
-  </div>
+  <app-news-snippet
+    [id]="article.id"
+    [title]="article.title"
+    [description]="article.description">
+  </app-news-snippet>
 </div>

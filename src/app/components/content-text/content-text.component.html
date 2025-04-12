@@ -1,0 +1,15 @@
+<div class="container__article">
+  <h1>{{ title }}</h1>
+
+  <br />
+
+  <p>
+    {{ description }}
+  </p>
+
+  <div [innerHTML]="article_text"></div>
+
+  <br />
+
+  <a [routerLink]="['']"> << VOLTAR </a>
+</div>

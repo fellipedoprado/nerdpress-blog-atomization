@@ -17,14 +17,6 @@
   }
 }
 
-.big-card__title > h1 {
-  margin-top: 15px;
-}
-
-.big-card__description > p {
-  color: grey;
-}
-
 .big-card__photo > img {
   width: 100%;
   height: auto;

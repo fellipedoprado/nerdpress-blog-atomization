@@ -16,18 +16,11 @@
       >
       </app-article-info-list>
 
-      <div class="small-card__title">
-        <h2>
-          <a [routerLink]="['content', article.id]">{{ article.title }}</a>
-        </h2>
-      </div>
-
-      <div class="small-card__description">
-        <p>
-          {{ article.description }}
-          <app-read-more [id]="article.id"></app-read-more>
-        </p>
-      </div>
+      <app-news-snippet
+        [id]="article.id"
+        [title]="article.title"
+        [description]="article.description">
+      </app-news-snippet>
     </div>
   </div>
 

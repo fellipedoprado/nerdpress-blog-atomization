@@ -1,27 +1,17 @@
 <div class="container__content">
   <img src="assets/images/placeholder.png" height="500px" alt="{{ article.title }}" />
 
-  <div class="container__article">
-    <h1>{{ article.title }}</h1>
+  <app-article-info-list
+    [category]="article.category"
+    [publishedAt]="article.publishedAt | date : 'dd/MM/yyyy'"
+    [author]="article.author"
+  >
+  </app-article-info-list>
 
-    <app-article-info-list
-      [category]="article.category"
-      [publishedAt]="article.publishedAt | date : 'dd/MM/yyyy'"
-      [author]="article.author"
-    >
-    </app-article-info-list>
-
-    <br>
-
-    <p>
-      {{ article.description }}
-    </p>
-
-    <div [innerHTML]="sanitizedArticleContent"></div>
-
-    <br>
-
-    <a [routerLink]="['']"> << VOLTAR </a>
-  </div>
+  <app-content-text
+    [title]="article.title"
+    [description]="article.description"
+    [article_text]="sanitizedArticleContent"
+  ></app-content-text>
 
 </div>
